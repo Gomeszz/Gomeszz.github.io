@@ -1,26 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+    <meta name="author" content="Os alunos:
+    JOSE AUGUSTO SOARES DE SOUZA NETO;
+    LUÍS GUSTAVO GIANVECCHIO SANTOS;
+    MARCELO LEMOS DE MELO;
+    RAFAEL RONALD FREITAS PAULINO;
+    RAFAEL KHODOR RESENDE;
+    VINICIUS GOMES DE SOUZA.">
+
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./imagens/favicon.png">
+
+
 </head>
-<body>
 
+<body class="corpo">
 
-    <div>
-        <div id="descritiva">
-            <a href="./calculo_descritiva (1).html">Estatística Descritiva</a>
+    <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- TOPO LOGO E MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- <div w3-include-html="./include/topoMenu.html"></div> -->
+
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="./imagens/logo.png">
+                    <a name="topo"></a>
+                </div>
+            </div>
         </div>
-        <div id="probabilidade">
-            <a href="./probabilidade.html">Probabilidade</a>
-        </div>
-        <div id="correlacao">
-            <a href="./correlacao_regressao.html">Correlação e Regressão</a>
-        </div>
-        
+
     </div>
 
+    <!-- MENU PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <a href="login.html"><i class="material-icons">calculate</i>Calculadora</a>
+                            <a href="oquee.html"><i class="material-icons">insert_chart_outlined</i>O que é
+                                Estatística?</a>
+                            <a href="eDescritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="medidaTC.html" class="submenu">Medidas de Tendêcia Central</a>
+                                </li>
+                                <li>
+                                    <a href="medidaDisp.html" class="submenu">Medidas de Dispersão</a>
+                                </li>
+                                <li>
+                                    <a href="medidaSep.html" class="submenu">Medidas Separatrizes</a>
+                                </li>
+                                <li>
+                                    <a href="distEFreq.html" class="submenu">Distribuição de Frequências</a>
+                                </li>
+                            </ul>
+                            <a href="probabilidades.html"><i class="material-icons">bar_chart</i>Distribuição de
+                                Probabilidades</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="pNormal.html" class="submenu">Distribuição Normal</a>
+                                </li>
+                                <li>
+                                    <a href="pBinomial.html" class="submenu">Distribuição Binomial</a>
+                                </li>
+                                <li>
+                                    <a href="pUniforme.html" class="submenu">Distribuição Uniforme</a>
+                                </li>
+                            </ul>
+                            <a href="correlaRegressao.html"><i class="material-icons">bubble_chart</i>Correlação de
+                                Regressão</a>
+                            <a href="como.html"><i class="material-icons">build</i>Como foi o aprendizado?</a>
+                            <a href="sobreNos.html"><i class="material-icons">groups</i>Quem somos?</a>
+                        </ul>
+                    </div>
+                </nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html"><span>Login</span></a></li>
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Título -->
+    <div class="section categories-titulo">
+        <div class="container">
+            <div class="row">
+                <h1 class="titulo">O TRABALHO</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apresentação -->
+    <div class="section categories-tituloresultados">
+        <div class="container">
+            <div class="row">
+                <span style="text-align: center;">
+                    <h3 class="titulo3">Introdução:</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Conteúdo -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <p>Estat&iacute;stica computacional, &eacute; a interface entre as estat&iacute;sticas e a ci&ecirc;ncia
+                    da computa&ccedil;&atilde;o. Podemos afirmar sem sombra de d&uacute;vidas que a estat&iacute;stica
+                    computacional &eacute; hoje em dia uma das principais ferramentas da Estat&iacute;stica. A
+                    Estat&iacute;stica &eacute; a &aacute;rea da matem&aacute;tica que coleta, analisa e interpreta
+                    dados num&eacute;ricos para o estudo de fen&ocirc;menos naturais, econ&ocirc;micos e sociais. O
+                    estat&iacute;stico planeja e coordena o levantamento de informa&ccedil;&otilde;es por meio de
+                    pesquisas, entrevistas, medi&ccedil;&otilde;es ou at&eacute; mesmo formul&aacute;rios, depois
+                    organiza, analisa e interpreta os resultados, cabe a ele montar o banco de dados para os mais
+                    diversos usos, como controle de qualidade da produ&ccedil;&atilde;o de uma ind&uacute;stria,
+                    recenseamento populacional, pesquisa eleitoral ou o lan&ccedil;amento de produtos no mercado de
+                    consumo, entre outros. Na ind&uacute;stria, acompanha os testes de qualidade, ajuda a fazer
+                    previs&atilde;o de vendas. Em laborat&oacute;rio, cria tabelas para sistematizar os resultados de
+                    experimentos e pesquisas. Em geral manipulam bancos de dados extensos, os quais seria
+                    imposs&iacute;vel de se resolver manualmente.</p>
+                <p> Neste trabalho temos a inten&ccedil;&atilde;o objetiva de fazer um software que realizar&aacute;
+                    c&aacute;lculos de estat&iacute;stica, assim exercitando a forma como programa&ccedil;&atilde;o
+                    &eacute; usada no curso de estat&iacute;stica, desenvolvendo uma solu&ccedil;&atilde;o que
+                    interprete os dados inseridos e responda conforme as m&eacute;tricas definidas, assim facilitando um
+                    trabalho e dando velocidade ao estat&iacute;stico. O usu&aacute;rio ter&aacute; &agrave; sua
+                    disposi&ccedil;&atilde;o se&ccedil;&otilde;es onde poder&aacute; entender como os c&aacute;lculos
+                    envolvidos na calculadora s&atilde;o realizados, em conjunto com links para listas de
+                    exerc&iacute;cios e v&iacute;deo aulas apresentadas no canal da Professora Maria Luisa Cervi Uzun.
+                    Na calculadora ser&atilde;o realizados os c&aacute;lculos da Estat&iacute;stica Descritiva
+                    Qualitativa nominal e Ordinal, Quantitativa Discreta e Cont&iacute;nua; das
+                    Distribui&ccedil;&otilde;es das Probabilidades Normal, Binomial e Uniforme; assim como dos
+                    C&aacute;lculos de Correla&ccedil;&atilde;o e Regress&atilde;o. Para tais c&aacute;lculos, o
+                    usu&aacute;rio dever&aacute; estar logado, e selecionar o c&aacute;lculo desejado; uma vez neste,
+                    dever&aacute; inserir as informa&ccedil;&otilde;es nos respectivos campos, e clicar em calcular, ou
+                    ent&atilde;o em limpar, para iniciar a inser&ccedil;&atilde;o de novas informa&ccedil;&otilde;es. Os
+                    resultados dos c&aacute;lculos efetuados, ser&atilde;o apresentados no espa&ccedil;o logo abaixo da
+                    calculadora.</p>
+                <p> Junto a este objetivo principal, desenvolveremos os conceitos explicitados nas aulas de Arquitetura
+                    de Dados, Engenharia de Software II e IHC &ndash; Intera&ccedil;&atilde;o Humano Computador do
+                    3&ordm; Ciclo do Curso de An&aacute;lise e Desenvolvimento de Sistemas da&nbsp; Faculdade de
+                    Tecnologia de S&atilde;o Paulo &ndash; Fatec/Franca &ndash; Campus Thom&aacute;s Novelino.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-footer">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column logof">
+                    <img src="./imagens/logo.png">
+                </div>
+
+                <div class="one-half column textof">
+                    <p>Trabalho realizado com fins educacionais. Fontes utilizadas na seção "Como foi o aprendizado?"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='./js/chart.js@2.8.0'></script>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script src='./js/jquery-ui.js'></script>
+    <script src='./js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/classie.js"></script>
+    <script src="./js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
 
 </body>
+
 </html>
